@@ -34,10 +34,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_182557) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", default: "", null: false
     t.string "phone", default: "", null: false
+    t.string "nik", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "aasm_state", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

@@ -1,0 +1,6 @@
+<%= @user.nik %>
+<%= @user.email %>
+<%= @user.phone %>
+<% if current_user.seller? == true %>
+  <%= link_to "Create Item", new_item_path %>
+<% end %>
